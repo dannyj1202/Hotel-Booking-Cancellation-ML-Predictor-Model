@@ -1,3 +1,130 @@
+# 🏨 Hotel Booking Cancellation ML Predictor
+
+This project is a supervised machine learning solution built for **XYZ Hotels Group** to predict whether a hotel booking will be cancelled. By accurately forecasting cancellations, the hotel chain can proactively manage their inventory, reduce revenue loss, and improve operational efficiency.
+
+---
+
+## 🔍 Problem Statement
+
+XYZ Hotels Group suffers from revenue and inventory loss due to frequent **booking cancellations**. This model aims to **predict whether a booking will be cancelled**, allowing the hotel to take corrective actions (like offering discounts or overbooking compensation) in advance.
+
+---
+
+## 🧠 Solution Overview
+
+- ✅ **Type**: Binary Classification
+- ✅ **Model**: Decision Tree Classifier
+- ✅ **Deployment**: Gradio App (Interactive UI)
+- ✅ **Metric Used**: F1 Score
+
+---
+
+## 📁 Dataset Summary
+
+| Feature                    | Description                                |
+|----------------------------|--------------------------------------------|
+| `lead_time`                | Days between booking and arrival           |
+| `market_segment_type`      | Booking channel (Online/Offline)           |
+| `avg_price_per_room`       | Average daily rate                         |
+| `no_of_adults`             | Number of adults                           |
+| `no_of_weekend_nights`     | Weekend nights booked                      |
+| `no_of_week_nights`        | Weekdays booked                            |
+| `no_of_special_requests`   | Requests like extra bed, high floor, etc.  |
+| `arrival_month`            | Month of arrival                           |
+| `required_car_parking_space`| Binary: Needed parking or not             |
+| `booking_status` (target)  | Cancelled or Not_Cancelled                 |
+
+---
+
+## 📈 Model Pipeline
+
+1. **Data Preprocessing**:
+   - Handled categorical variables using one-hot encoding
+   - Removed non-relevant columns like `arrival_date`
+
+2. **Model Building**:
+   - Trained a `DecisionTreeClassifier` with stratified train-test split
+   - Evaluated with F1 Score
+
+3. **Hyperparameter Tuning**:
+   - Tuned `max_leaf_nodes` and `min_samples_split` using `GridSearchCV`
+   - Improved generalization from 79.3% → **80.2% F1 Score**
+
+4. **Deployment**:
+   - Created a Gradio interface to input booking data and predict cancellations in real-time.
+
+---
+
+## ⚙️ How to Run This Project
+
+### 1. Clone the Repo
+git clone https://github.com/dannyj1202/Hotel-Booking-Cancellation-ML-Predictor-Model.git
+cd Hotel-Booking-Cancellation-ML-Predictor-Model
+
+### 2. Install Requirements
+pip install -r requirements.txt
+
+
+### 3. Run the Gradio App
+python project.py
+---
+
+## 🚀 Sample Prediction
+
+| Input               | Value  |
+| ------------------- | ------ |
+| Lead Time           | 150    |
+| Market Segment Type | Online |
+| Avg Price Per Room  | 130.50 |
+| No. of Adults       | 2      |
+| Weekend Nights      | 2      |
+| Week Nights         | 3      |
+| Special Requests    | 1      |
+| Arrival Month       | 7      |
+| Required Parking    | Yes    |
+
+→ **Prediction**: ❌ Cancelled
+→ **Confidence**: 84.5%
+
+---
+
+## 🎯 Model Performance
+
+| Metric           | Train Data                                        | Test Data |
+| ---------------- | ------------------------------------------------- | --------- |
+| F1 Score         | 98.96%                                            | **80.2%** |
+| Confusion Matrix | ![Confusion Matrix](visuals/confusion_matrix.png) |           |
+
+---
+
+## 📂 Folder Structure
+
+Hotel_Booking_Cancellation/
+│
+├── visuals/                         # Graphs & screenshots
+├── project.py                      # Main Gradio app
+├── README.md                       # You’re here!
+├── requirements.txt                # Required packages
+├── hotel_cancellation_prediction_model_v1_0.joblib
+├── model_training.ipynb            # Full data science workflow
+├── XYZHotelsGroup.csv              # Dataset
+
+---
+
+## 🧠 Future Improvements
+
+* Integrate model with hotel’s CRM
+* Try ensemble models (Random Forest, XGBoost)
+* Add support for batch booking predictions
+
+---
+
+## 📜 License
+
+MIT License – use freely, attribute responsibly.
+
+---
+OVERALL INDEPTH EXPLANATION: 
 Main Problem Statement: 
 
 A chain of hotels, XYZ Hotels Group, is facing a problem of inventory loss due to booking cancellations, resulting in revenue loss. They want your help to build an Data Science solution that will help them predict the likelihood of a booking getting cancelled so that they can take measures to fill in potential vacancies.
