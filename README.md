@@ -59,6 +59,7 @@ XYZ Hotels Group suffers from revenue and inventory loss due to frequent **booki
 
 ### 1. Clone the Repo
 git clone https://github.com/dannyj1202/Hotel-Booking-Cancellation-ML-Predictor-Model.git
+
 cd Hotel-Booking-Cancellation-ML-Predictor-Model
 
 ### 2. Install Requirements
