@@ -93,7 +93,7 @@ python project.py
 | Metric           | Train Data                                        | Test Data |
 | ---------------- | ------------------------------------------------- | --------- |
 | F1 Score         | 98.96%                                            | **80.2%** |
-| Confusion Matrix | ![Confusion Matrix](visuals/confusion_matrix.png) |           |
+| Confusion Matrix | Refer Visuals |           |
 
 ---
 
