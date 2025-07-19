@@ -97,20 +97,6 @@ python project.py
 
 ---
 
-## 📂 Folder Structure
-
-Hotel_Booking_Cancellation/
-│
-├── visuals/                         # Graphs & screenshots
-├── project.py                      # Main Gradio app
-├── README.md                       # You’re here!
-├── requirements.txt                # Required packages
-├── hotel_cancellation_prediction_model_v1_0.joblib
-├── model_training.ipynb            # Full data science workflow
-├── XYZHotelsGroup.csv              # Dataset
-
----
-
 ## 🧠 Future Improvements
 
 * Integrate model with hotel’s CRM
